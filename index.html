@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bayong Developer Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/Sariph_logo-removebg-preview.png" alt="Sari.ph Logo" class="logo" />
+      <div>
+        <h1>Bayong Developer Dashboard</h1>
+        <p>Product data powered by FakeStoreAPI</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="table-section">
+      <div class="section-header">
+        <h2>Products</h2>
+        <span id="statusText" class="status">Loading products...</span>
+      </div>
+
+      <div class="table-wrap">
+        <table id="productsTable" aria-label="FakeStore products table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Image</th>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody id="productsBody">
+            <tr>
+              <td colspan="6" class="placeholder">Loading product list...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="overlay" class="overlay hidden" role="presentation"></div>
+
+  <aside id="popup" class="popup hidden" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <button id="closePopup" class="close-btn" aria-label="Close details">×</button>
+    <div class="popup-content">
+      <img id="popupImage" src="" alt="Product image" class="popup-image" />
+      <div class="popup-info">
+        <h3 id="popupTitle">Product Title</h3>
+        <p><strong>Category:</strong> <span id="popupCategory"></span></p>
+        <p><strong>Price:</strong> <span id="popupPrice"></span></p>
+        <p><strong>Rating:</strong> <span id="popupRating"></span></p>
+        <p id="popupDescription" class="description"></p>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
